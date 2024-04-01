@@ -58,13 +58,15 @@ double Line::length() const {
 double Line::slope() const {
     // TODO: Return the slope of the line
 
-
 double dx = p2.getX() - p1.getX();
 double dy = p2.getY() - p1.getY();
+if(dx==0){
+return std::numeric_limits<double>::infinity();
+}
+else{
+double sl = dy/dx;
+return sl;
+}
 
-return (dy/dx);
-
-//i am ignoring the case when dx = 0
-//will see later
 }
 
