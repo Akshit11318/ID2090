@@ -41,7 +41,6 @@ class FSM:
                 substring = string[start_index:end_index]
                 if self.match(substring):
                     matched_indices.append((start_index, end_index))
-                    break
         return matched_indices
 
     def highlight_match(self, string):
